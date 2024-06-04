@@ -1,15 +1,9 @@
-import './App.css';
+import QRCode from "./components/QR/QRCode";
 
 function App() {
-
-  return (
-    <>
-      <div>
-        
-      </div>
-      
-    </>
-  );
+    return (
+      <QRCode/>
+    );
 }
 
 export default App;
