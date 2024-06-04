@@ -1,7 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import reactRefresh from "@vitejs/plugin-react-refresh";
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [reactRefresh()],
+  resolve: {
+    alias: {
+      "react-router-dom": new URL("node_modules/react-router-dom", import.meta.url).pathname,
+    },
+  },
+});

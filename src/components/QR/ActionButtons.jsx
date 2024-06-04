@@ -6,14 +6,19 @@ import { saveAs } from 'file-saver';
 const ActionButtons = ({ qrData }) => {
     const handleDownload = () => {
         const qrElement = document.getElementById('qr-code');
+        console.log(qrElement);
         html2canvas(qrElement).then(canvas => {
             canvas.toBlob(blob => {
-                saveAs(blob, 'QRCode.png');
+                if (blob) {
+                    saveAs(blob, 'QRCode.png');
+                } else {
+                    console.error('Error al crear el blob.');
+                }
             });
         }).catch(error => {
             console.error('Error al capturar el código QR:', error);
         });
-    };
+    };    
 
     const handleShare = async () => {
         if (navigator.share) {
@@ -34,18 +39,18 @@ const ActionButtons = ({ qrData }) => {
     return (
         <div className="flex mt-4">
             <button
-                className="btn flex-1 flex items-center justify-center mr-4 bg-gray-700 rounded-md text-white"
+                className="btn flex-1 flex items-center justify-center mr-4 bg-gray-700 rounded-md text-white border border-gray-600 hover:bg-gray-600"
                 onClick={handleDownload}
             >
                 <span>Descargar</span>
-                <FaDownload className="ml-1" />
+                <FaDownload className="ml-2" />
             </button>
             <button
-                className="btn flex-1 flex items-center justify-center bg-gray-700 rounded-md text-white"
+                className="btn flex-1 flex items-center justify-center py-1 bg-gray-700 rounded-md text-white border border-gray-600 hover:bg-gray-600"
                 onClick={handleShare}
             >
                 <span>Compartir</span>
-                <FaShare className="ml-1" />
+                <FaShare className="ml-2" />
             </button>
         </div>
     );
