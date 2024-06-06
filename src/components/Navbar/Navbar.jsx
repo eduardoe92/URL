@@ -7,14 +7,10 @@ function NavBar() {
             QR Create
           </a>
         </div>
-        <div className="flex items-center space-x-3">
-          <button className="bg-gray-700 text-white px-4 py-2 rounded-md border border-gray-600 hover:bg-gray-600">
-            Iniciar Sesión
-          </button>
-        </div>
       </div>
     </nav>
   );
 }
 
 export default NavBar
+
