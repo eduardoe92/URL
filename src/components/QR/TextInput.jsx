@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 
-const TextInput = ({ setQrData }) => {
+const TextInput = ({ setQrData, initialData }) => {
     const handleInputChange = (event) => {
-        setQrData(event.target.value);
+        const newValue = event.target.value;
+        if (newValue.trim() === "") {
+            setQrData(initialData);
+        } else {
+            setQrData(newValue);
+        }
     };
 
     return (
@@ -17,6 +22,7 @@ const TextInput = ({ setQrData }) => {
 
 TextInput.propTypes = {
     setQrData: PropTypes.func.isRequired,
+    initialData: PropTypes.string.isRequired,
 };
 
 export default TextInput;

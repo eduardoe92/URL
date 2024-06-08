@@ -1,24 +1,22 @@
 import PropTypes from 'prop-types';
 import { FaDownload, FaShare } from 'react-icons/fa';
-import html2canvas from 'html2canvas';
-import { saveAs } from 'file-saver';
+import domtoimage from 'dom-to-image';
 
 const ActionButtons = ({ qrData }) => {
     const handleDownload = () => {
         const qrElement = document.getElementById('qr-code');
-        console.log(qrElement);
-        html2canvas(qrElement).then(canvas => {
-            canvas.toBlob(blob => {
-                if (blob) {
-                    saveAs(blob, 'QRCode.png');
-                } else {
-                    console.error('Error al crear el blob.');
-                }
+        
+        domtoimage.toPng(qrElement) 
+            .then((dataUrl) => {
+                var link = document.createElement('a');
+                link.download = 'qr-code.png';
+                link.href = dataUrl;
+                link.click();
+            })
+            .catch((error) => {
+                console.error('Error al capturar el código QR:', error);
             });
-        }).catch(error => {
-            console.error('Error al capturar el código QR:', error);
-        });
-    };    
+    };
 
     const handleShare = async () => {
         if (navigator.share) {

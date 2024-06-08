@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.0",
+    "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
     "qrcode": "^1.5.3",

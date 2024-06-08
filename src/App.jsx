@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <QRCode initialData={defaultQRData} />
       <Footer />
     </>

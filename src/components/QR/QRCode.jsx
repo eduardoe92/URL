@@ -12,7 +12,7 @@ const QRCode = ({ initialData }) => {
             <section>
                 <TextInput setQrData={setQrData} />
                 <QRDisplay initialData={qrData} />
-                <ActionButtons />
+                <ActionButtons qrData={qrData} />
             </section>
         </div>
     );
