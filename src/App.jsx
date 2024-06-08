@@ -1,5 +1,5 @@
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
+import NavBar from "./components/Navbar/Navbar";
 import QRCode from "./components/QR/QRCode";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <NavBar/>
       <QRCode initialData={defaultQRData} />
       <Footer />
     </>
