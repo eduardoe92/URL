@@ -49,7 +49,7 @@ function NavBar() {
           } w-full md:flex md:items-center md:w-auto mt-4 md:mt-0`}
         >
           <ul className={`md:flex md:space-x-4 text-white p-4 md:p-0 rounded-lg md:rounded-none ${
-            navColour || expand ? "bg-[#1b1a2ea9]" : "md:bg-black"
+            navColour || expand ? "bg-[black]" : "md:bg-black"
           }`}>
             <li className="my-2 md:my-0">
               <Link to="/" onClick={() => setExpand(false)}>
