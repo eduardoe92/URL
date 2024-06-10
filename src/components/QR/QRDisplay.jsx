@@ -2,22 +2,26 @@ import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import { useEffect, useState } from 'react';
 
-const QRDisplay = ({ initialData }) => {
-    const [qrData, setQrData] = useState(initialData);
+const QRDisplay = ({ data, config }) => {
+    const [qrData, setQrData] = useState(data);
 
     useEffect(() => {
-        setQrData(initialData);
-    }, [initialData]);
+        setQrData(data);
+    }, [data]);
 
     return (
-        <div className="mt-2 flex justify-center items-center bg-white p-3" id="qr-code">
-            {qrData && <QRCode value={qrData} size={250} />}
+        <div className="mt-2 flex justify-center items-center bg-white p-3 qr-code-wrapper" id="qr-code">
+            {qrData && <QRCode value={qrData} size={config.size} fgColor={config.color} />}
         </div>
     );
 };
 
 QRDisplay.propTypes = {
-    initialData: PropTypes.string.isRequired,
+    data: PropTypes.string.isRequired,
+    config: PropTypes.shape({
+        size: PropTypes.number.isRequired,
+        color: PropTypes.string.isRequired,
+    }).isRequired,
 };
 
 export default QRDisplay;

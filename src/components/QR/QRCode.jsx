@@ -3,16 +3,29 @@ import ActionButtons from "./ActionButtons";
 import QRDisplay from "./QRDisplay";
 import TextInput from "./TextInput";
 import PropTypes from 'prop-types';
+import QRConfigurator from './QRConfigurator';
 
 const QRCode = ({ initialData }) => {
     const [qrData, setQrData] = useState(initialData);
+    const [qrConfig, setQrConfig] = useState({ size: 400, color: '#000000' });
+
+    const handleConfigChange = (config) => {
+        setQrConfig(config);
+    };
 
     return (
-        <div className="flex items-center justify-center h-screen">
-            <section>
-                <TextInput setQrData={setQrData} initialData={initialData} />
-                <QRDisplay initialData={qrData} />
-                <ActionButtons qrData={qrData} />
+        <div className="flex h-screen">
+            <section className="w-1/2 flex flex-col items-center justify-center p-4">
+                <div className="w-full max-w-xs">
+                    <TextInput setQrData={setQrData} initialData={initialData} />
+                    <QRConfigurator onConfigChange={handleConfigChange} />
+                    <ActionButtons qrData={qrData} />
+                </div>
+            </section>
+            <section className="w-1/2 flex items-center justify-center">
+                <div className="qr-container">
+                    <QRDisplay data={qrData} config={qrConfig} />
+                </div>
             </section>
         </div>
     );
