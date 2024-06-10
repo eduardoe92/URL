@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const MemoizedSketchPicker = React.memo(SketchPicker);
 
 const QRConfigurator = ({ onConfigChange }) => {
-    const [size, setSize] = useState(400);
+    const [size, setSize] = useState(300);
     const [color, setColor] = useState('#000000');
     const [showColorPicker, setShowColorPicker] = useState(false);
 

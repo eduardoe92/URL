@@ -7,7 +7,7 @@ import QRConfigurator from './QRConfigurator';
 
 const QRCode = ({ initialData }) => {
     const [qrData, setQrData] = useState(initialData);
-    const [qrConfig, setQrConfig] = useState({ size: 400, color: '#000000' });
+    const [qrConfig, setQrConfig] = useState({ size: 300, color: '#000000' });
 
     const handleConfigChange = (config) => {
         setQrConfig(config);
