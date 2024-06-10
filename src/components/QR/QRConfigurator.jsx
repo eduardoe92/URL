@@ -99,7 +99,7 @@ const QRConfigurator = ({ onConfigChange }) => {
             {showColorPicker && (
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div
-                        className="relative p-5 bg-white rounded-lg color-picker-modal"
+                        className="relative p-5 bg-gray-600 rounded-lg color-picker-modal"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <MemoizedSketchPicker
