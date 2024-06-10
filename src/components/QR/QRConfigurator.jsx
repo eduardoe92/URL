@@ -71,7 +71,7 @@ const QRConfigurator = ({ onConfigChange }) => {
                     <input
                         type="number"
                         min="100"
-                        max="1000"
+                        max="800"
                         value={size}
                         onChange={handleManualSizeChange}
                         className="ml-4 w-20 h-8 text-white rounded-lg border-gray-300 border-2 px-2"
@@ -81,7 +81,7 @@ const QRConfigurator = ({ onConfigChange }) => {
                     <input
                         type="range"
                         min="100"
-                        max="1000"
+                        max="800"
                         value={size}
                         onChange={handleSizeChange}
                         className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
