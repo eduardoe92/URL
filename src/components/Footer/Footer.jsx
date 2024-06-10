@@ -15,7 +15,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className="bg-black py-4">
+        <footer className="bg-black py-2">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-gray-300">
                 <div className="flex items-center">
                     <LogoIcon/>
