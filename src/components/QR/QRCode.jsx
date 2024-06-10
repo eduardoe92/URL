@@ -14,15 +14,15 @@ const QRCode = ({ initialData }) => {
     };
 
     return (
-        <div className="flex h-screen">
-            <section className="w-1/2 flex flex-col items-center justify-center p-4">
+        <div className="flex flex-col md:flex-row h-screen mt-16 md:mt-20">
+            <section className="w-full md:w-1/2 flex flex-col items-center justify-center p-10">
                 <div className="w-full max-w-xs">
                     <TextInput setQrData={setQrData} initialData={initialData} />
                     <QRConfigurator onConfigChange={handleConfigChange} />
                     <ActionButtons qrData={qrData} />
                 </div>
             </section>
-            <section className="w-1/2 flex items-center justify-center">
+            <section className="w-full md:w-1/2 flex items-center justify-center">
                 <div className="qr-container">
                     <QRDisplay data={qrData} config={qrConfig} />
                 </div>
