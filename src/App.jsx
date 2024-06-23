@@ -6,11 +6,13 @@ function App() {
   const defaultQRData = "https://eduardoeliaschacon-portfolio.vercel.app/";
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <NavBar />
-      <QRCode initialData={defaultQRData} />
+      <div className="flex-1 items-center justify-center">
+        <QRCode initialData={defaultQRData} />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
