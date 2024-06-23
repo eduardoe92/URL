@@ -10,7 +10,7 @@ const QRDisplay = ({ data, config }) => {
     }, [data]);
 
     return (
-        <div className="mt-2 flex justify-center items-center bg-white p-3 qr-code-wrapper" id="qr-code">
+        <div className="mt-2 flex justify-center items-center bg-white p-3 qr-code-wrapper rounded-lg" id="qr-code">
             {qrData && <QRCode value={qrData} size={config.size} fgColor={config.color} />}
         </div>
     );

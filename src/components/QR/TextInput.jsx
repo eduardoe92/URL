@@ -13,7 +13,7 @@ const TextInput = ({ setQrData, initialData }) => {
     return (
         <input
             type="text"
-            className="block w-full mt-2 mb-4 p-4 bg-gray-800 border border-gray-300 rounded-md"
+            className="block w-full mt-2 mb-4 p-4 bg-tertiary border border-border rounded-lg"
             placeholder="Ingresa el enlace / texto"
             onChange={handleInputChange}
         />

@@ -37,14 +37,14 @@ const ActionButtons = ({ qrData }) => {
     return (
         <div className="flex mt-4">
             <button
-                className="btn flex-1 flex items-center justify-center mr-4 bg-gray-700 rounded-md text-white border border-gray-600 hover:bg-gray-600"
+                className="btn flex-1 flex items-center justify-center mr-4 bg-tertiary rounded-lg text-secondary border border-gray-600 hover:bg-gray-600"
                 onClick={handleDownload}
             >
                 <span>Descargar</span>
                 <FaDownload className="ml-2" />
             </button>
             <button
-                className="btn flex-1 flex items-center justify-center py-1 bg-gray-700 rounded-md text-white border border-gray-600 hover:bg-gray-600"
+                className="btn flex-1 flex items-center justify-center py-1 bg-tertiary rounded-lg text-secondary border border-gray-600 hover:bg-gray-600"
                 onClick={handleShare}
             >
                 <span>Compartir</span>

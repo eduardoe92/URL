@@ -14,7 +14,7 @@ const QRCode = ({ initialData }) => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row h-screen mt-16 md:mt-20">
+        <div className="flex flex-col md:flex-row mt-16 md:mt-20">
             <section className="w-full md:w-1/2 flex flex-col items-center justify-center p-10">
                 <div className="w-full max-w-xs">
                     <TextInput setQrData={setQrData} initialData={initialData} />
