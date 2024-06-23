@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -15,10 +15,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 
-.qr-container {
+/* .qr-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,12 +39,12 @@
 .fixed-size input,
 .fixed-size button {
   width: 100%;
-}
+} */
 
 /*-----------------*/
 /* QR Configurator */
 /*-----------------*/
-
+/* 
 .slider {
   width: 200px;
   appearance: none;
@@ -85,4 +85,4 @@
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     opacity: 1;
-}
+} */
