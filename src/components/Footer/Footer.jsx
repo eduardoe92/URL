@@ -1,46 +1,71 @@
-import { useEffect, useState } from 'react';
-import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
-import LogoIcon from '../Logo/LogoIcon';
-import { BiLink } from 'react-icons/bi';
+import { useEffect, useState } from "react";
+import { FaLinkedin, FaInstagram, FaGithub, FaGlobe } from "react-icons/fa";
 
 const Footer = () => {
-    const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentYear(new Date().getFullYear());
-        }, 1000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentYear(new Date().getFullYear());
+    }, 1000);
 
-        return () => clearInterval(intervalId);
-    }, []);
+    return () => clearInterval(intervalId);
+  }, []);
 
-    return (
-        <footer className="bg-black py-2">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-gray-300">
-                <div className="flex items-center">
-                    <LogoIcon/>
-                </div>
-                <div className="text-center my-2 md:my-0">
-                    <strong>&copy; {currentYear}</strong>
-                    <p>Diseñado por Eduardo Chacon</p>
-                </div>
-                <div className="flex space-x-4">
-                    <a href="https://eduardoeliaschacon-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                        <BiLink size={24} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/eduardoe92/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                        <FaLinkedin size={24} />
-                    </a>
-                    <a href="https://github.com/eduardoe92" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                        <FaGithub size={24} />
-                    </a>
-                    <a href="https://www.instagram.com/eduardo.e" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                        <FaInstagram size={24} />
-                    </a>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="w-full text-secondary border-t-secondary border-t-2 flex flex-col md:flex-row justify-center items-center text-center md:justify-between pt-8 pb-8 mx-auto mt-10 md:mt-0">
+      <span className= "text-lg">
+        <strong>&copy; {currentYear}</strong>{" "}
+        <span aria-hidden className="font-semibold hidden md:inline">
+          |
+        </span>{" "}
+        <br aria-hidden className="block md:hidden" />
+        Diseñado por Eduardo Chacon
+      </span>
+      <ul className="flex flex-row gap-x-6 items-center mt-5 md:mt-0">
+        <li>
+          <a
+            href="https://eduardoeliaschacon-portfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="hover:scale-125 hover:opacity-70 transition inline-block"
+          >
+            <FaGlobe size={24} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/eduardoe92/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="hover:scale-125 hover:opacity-70 transition inline-block"
+          >
+            <FaLinkedin size={24} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/eduardoe92"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="hover:scale-125 hover:opacity-70 transition inline-block"
+          >
+            <FaGithub size={24} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/eduardo.e"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="hover:scale-125 hover:opacity-70 transition inline-block"
+          >
+            <FaInstagram size={24} />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  );
 };
 
 export default Footer;
