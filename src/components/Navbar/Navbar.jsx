@@ -24,13 +24,11 @@ function NavBar() {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        navColour ? "bg-[black] shadow-[0_10px_10px_0_rgba(9,5,29,0.171)] backdrop-blur-[15px]" : "bg-black"
-      }`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 bg-background`}
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-[0.3rem_2rem] text-[1.2rem]">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between w-auto p-[0.3rem_2rem] text-[1.2rem]">
         <div className="flex justify-between w-full md:w-auto">
-          <Link to="/" className="flex items-center text-white text-2xl font-bold">
+          <Link to="/" className="flex items-center text-secondary text-2xl font-bold">
             <LogoIcon/>
             QR Create
           </Link>
@@ -48,8 +46,8 @@ function NavBar() {
             expand ? "block" : "hidden"
           } w-full md:flex md:items-center md:w-auto mt-4 md:mt-0`}
         >
-          <ul className={`md:flex md:space-x-4 text-white p-4 md:p-0 rounded-lg md:rounded-none ${
-            navColour || expand ? "bg-[black]" : "md:bg-black"
+          <ul className={`md:flex md:space-x-4 text-secondary p-4 md:p-0 rounded-lg md:rounded-none ${
+            navColour || expand ? "bg-background" : "md:bg-background"
           }`}>
             <li className="my-2 md:my-0">
               <Link to="/" onClick={() => setExpand(false)}>
