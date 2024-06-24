@@ -30,6 +30,7 @@ const Footer = () => {
             rel="noopener noreferrer nofollow"
             className="hover:scale-125 hover:opacity-70 transition inline-block"
           >
+            <span className="sr-only">WebSite</span>
             <FaGlobe size={24} />
           </a>
         </li>
@@ -40,6 +41,7 @@ const Footer = () => {
             rel="noopener noreferrer nofollow"
             className="hover:scale-125 hover:opacity-70 transition inline-block"
           >
+            <span className="sr-only">Linkedin</span>
             <FaLinkedin size={24} />
           </a>
         </li>
@@ -50,6 +52,7 @@ const Footer = () => {
             rel="noopener noreferrer nofollow"
             className="hover:scale-125 hover:opacity-70 transition inline-block"
           >
+            <span className="sr-only">Github</span>
             <FaGithub size={24} />
           </a>
         </li>
@@ -60,6 +63,7 @@ const Footer = () => {
             rel="noopener noreferrer nofollow"
             className="hover:scale-125 hover:opacity-70 transition inline-block"
           >
+            <span className="sr-only">Instagram</span>
             <FaInstagram size={24} />
           </a>
         </li>
