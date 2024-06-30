@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-background: #192936;
+  --color-primary: #333;
+  --color-secondary: #ddd;
+  --color-tertiary: #3b5a71;
+  --color-border: #000000;
+
+  --font-sans: "Jost Variable", system-ui, sans-serif;
+}

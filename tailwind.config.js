@@ -10,14 +10,14 @@ export default {
         '8xl': '110rem',
       },
       fontFamily: {
-        'sans': ['"Jost Variable"', 'system-ui', 'sans-serif'],
+        'sans': 'var(--font-sans)',
       },
       colors: {
-        'background': '#192936',
-        'primary': '#333',
-        'secondary': '#ddd',
-        'tertiary': '#3b5a71',
-        'border':'#000000',
+        'background': 'var(--color-background)',
+        'primary': 'var(--color-primary)',
+        'secondary': 'var(--color-secondary)',
+        'tertiary': 'var(--color-tertiary)',
+        'border':'var(--color-border)',
       }
     },
   },
