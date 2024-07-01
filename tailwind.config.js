@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-      maxWidth: {
-        '8xl': '110rem',
+      padding: {
+        '18': '4.5rem',
       },
       fontFamily: {
         'sans': 'var(--font-sans)',
@@ -17,7 +17,7 @@ export default {
         'primary': 'var(--color-primary)',
         'secondary': 'var(--color-secondary)',
         'tertiary': 'var(--color-tertiary)',
-        'border':'var(--color-border)',
+        'border': 'var(--color-border)',
       }
     },
   },
