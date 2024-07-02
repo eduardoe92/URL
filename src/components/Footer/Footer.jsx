@@ -31,10 +31,10 @@ const Footer = () => {
   }, [currentYear]);
 
   return (
-    <footer className="relative mt-8 md:mt-0 flex w-full flex-col place-items-center pb-8 pt-8 md:flex-row md:justify-between md:pt-16">
+    <footer className="w-full relative max-w-screen-xl flex flex-col items-center justify-between mx-auto py-4 pb-8 pt-8 md:flex-row md:justify-between md:pt-16">
       <hr className="absolute top-0 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9" />
 
-      <span className="flex flex-col gap-2 md:flex-row lg:gap-6 text-white text-center pl-0 md:pl-32 lg:pl-56">
+      <span className="flex flex-col gap-2 md:flex-row lg:gap-6 text-white text-center md:pl-16 lg:pl-6">
         <strong>&copy; {currentYear}</strong>{" "}
         <span aria-hidden className="font-semibold hidden md:inline">
           |
@@ -48,7 +48,7 @@ const Footer = () => {
         className="my-8 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:hidden"
       ></hr>
 
-      <ul className="flex flex-row gap-x-6 text-white items-center mt-0 md:mt-0 pr-0 md:pr-32 lg:pr-56">
+      <ul className="flex flex-row gap-x-6 text-white items-center mt-0 md:pr-16 lg:pr-6">
         {socialLinks.map(({ href, label, icon: Icon }) => (
           <li key={label}>
             <a
