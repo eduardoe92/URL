@@ -22,7 +22,7 @@ const QRCode = ({ initialData }) => {
                     <ActionButtons qrData={qrData} />
                 </div>
             </section>
-            <section className="w-full md:w-1/2 flex items-center justify-center">
+            <section className="w-full md:w-1/2 flex items-center justify-center pb-14 md:pb-0">
                 <div className="qr-container">
                     <QRDisplay data={qrData} config={qrConfig} />
                 </div>
