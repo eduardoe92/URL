@@ -1,9 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-
+import { nextui } from "@nextui-org/react";
 import colors from 'tailwindcss/colors';
 import formsPlugin from '@tailwindcss/forms';
 
-export default {
+const tailwindConfig = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
@@ -38,11 +37,15 @@ export default {
       },
     },
   },
+  darkMode: "class",
   plugins: [
+    nextui(),
     formsPlugin,
   ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-}
+};
+
+export default tailwindConfig;
