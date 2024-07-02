@@ -1,63 +1,111 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineHome } from "react-icons/ai";
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Button,
+} from "@nextui-org/react";
+import { BsGithub } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 import LogoIcon from "../Logo/LogoIcon";
 
 function NavBar() {
-  const [expand, setExpand] = useState(false);
-  const [navColour, setNavColour] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  useEffect(() => {
-    const scrollHandler = () => {
-      if (window.scrollY >= 20) {
-        setNavColour(true);
-      } else {
-        setNavColour(false);
-      }
-    };
+  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
 
-    window.addEventListener("scroll", scrollHandler);
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
+  const menuItems = [
+    { name: "Inicio", path: "/" },
+    { name: "Creación QR", path: "/create" },
+  ];
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleAuthClick = () => {
+    setIsAuthenticated((prev) => !prev);
+    setIsMenuOpen(false);
+  };
 
   return (
-    <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-300 bg-background`}
-    >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between w-auto p-[0.3rem_2rem] text-[1.2rem]">
-        <div className="flex justify-between w-full md:w-auto">
-          <Link to="/" className="flex items-center text-secondary text-2xl font-bold">
-            <LogoIcon/>
-            QR Create
-          </Link>
-          <button
-            className="md:hidden relative bg-transparent border-none outline-none"
-            onClick={() => setExpand(!expand)}
+    <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="text-white">
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <NavLink to="/" className="flex items-center" onClick={handleMenuItemClick}>
+            <LogoIcon />
+            <p className="font-bold">QR App</p>
+          </NavLink>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-white font-bold" : "text-white"
+            }
+            onClick={handleMenuItemClick}
           >
-            <span className="block bg-[#ffffff] h-[4px] w-[27px] mt-[5px] mb-[5px]"></span>
-            <span className="block bg-[#ffffff] h-[4px] w-[27px] mt-[5px] mb-[5px]"></span>
-            <span className="block bg-[#ffffff] h-[4px] w-[27px] mt-[5px] mb-[5px]"></span>
-          </button>
-        </div>
-        <div
-          className={`${
-            expand ? "block" : "hidden"
-          } w-full md:flex md:items-center md:w-auto mt-4 md:mt-0`}
-        >
-          <ul className={`md:flex md:space-x-4 text-secondary p-4 md:p-0 rounded-lg md:rounded-none ${
-            navColour || expand ? "bg-background" : "md:bg-background"
-          }`}>
-            <li className="my-2 md:my-0">
-              <Link to="/" onClick={() => setExpand(false)}>
-                <AiOutlineHome className="inline mr-1 mb-1" /> Home
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            Inicio
+          </NavLink>
+        </NavbarItem>
+        <NavbarItem>
+          <NavLink
+            to="/create"
+            className={({ isActive }) =>
+              isActive ? "text-white font-bold" : "text-white"
+            }
+            onClick={handleMenuItemClick}
+          >
+            Creación QR
+          </NavLink>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button
+            as={NavLink}
+            to={isAuthenticated ? "/logout" : "/login"}
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-bold flex items-center"
+                : "text-white flex items-center hover:scale-110 hover:opacity-80 transition"
+            }
+            variant="flat"
+            onClick={() => {
+              handleAuthClick();
+            }}
+          >
+            <BsGithub className="mr-1" />
+            {isAuthenticated ? "Sign Out" : "Sign Up"}
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={index}>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                isActive ? "text-white font-bold w-full" : "text-white w-full"
+              }
+              onClick={handleMenuItemClick}
+            >
+              {item.name}
+            </NavLink>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
   );
 }
 
