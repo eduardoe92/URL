@@ -33,14 +33,22 @@ function NavBar() {
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="text-white">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isMenuOpen}
+      className="text-white"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <NavLink to="/" className="flex items-center" onClick={handleMenuItemClick}>
+          <NavLink
+            to="/"
+            className="flex items-center"
+            onClick={handleMenuItemClick}
+          >
             <LogoIcon />
             <p className="font-bold">QR App</p>
           </NavLink>
@@ -69,18 +77,37 @@ function NavBar() {
             Creación QR
           </NavLink>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
+
         <NavbarItem>
+          <NavLink
+            to="/create"
+            className={({ isActive }) =>
+              isActive ? "text-white font-bold" : "text-white"
+            }
+            onClick={handleMenuItemClick}
+          >
+            Creación QR
+          </NavLink>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent justify="end">
+        <NavbarItem
+          key="primary"
+          color="primary"
+          content="primary"
+          className="capitalize"
+        >
           <Button
             as={NavLink}
-            to={isAuthenticated ? "/logout" : "/login"}
+            to={isAuthenticated ? "/" : "/"}
             className={({ isActive }) =>
               isActive
                 ? "text-white font-bold flex items-center"
                 : "text-white flex items-center hover:scale-110 hover:opacity-80 transition"
             }
             variant="flat"
+            color="primary"
             onClick={() => {
               handleAuthClick();
             }}
