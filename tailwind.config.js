@@ -30,7 +30,7 @@ const tailwindConfig = {
         blue: colors.blue,
         green: colors.green,
         background: 'var(--color-background)',
-        primary: 'var(--color-primary)',
+        primaryColor: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         tertiary: 'var(--color-tertiary)',
         border: 'var(--color-border)',
