@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Main from "./components/Main";
+import Main from "./components/Main/Main";
 import NavBar from "./components/Navbar/Navbar";
 import QRCode from "./components/QR/QRCode";
 
