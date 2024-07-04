@@ -15,7 +15,6 @@ import LogoIcon from "../Logo/LogoIcon";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
 
   const menuItems = [
@@ -36,7 +35,7 @@ function NavBar() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
-      className="text-white"
+      className="text-white py-1"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -55,40 +54,19 @@ function NavBar() {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-white font-bold" : "text-white"
-            }
-            onClick={handleMenuItemClick}
-          >
-            Inicio
-          </NavLink>
-        </NavbarItem>
-        <NavbarItem>
-          <NavLink
-            to="/create"
-            className={({ isActive }) =>
-              isActive ? "text-white font-bold" : "text-white"
-            }
-            onClick={handleMenuItemClick}
-          >
-            Creación QR
-          </NavLink>
-        </NavbarItem>
-
-        <NavbarItem>
-          <NavLink
-            to="/create"
-            className={({ isActive }) =>
-              isActive ? "text-white font-bold" : "text-white"
-            }
-            onClick={handleMenuItemClick}
-          >
-            Creación QR
-          </NavLink>
-        </NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={index}>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                isActive ? "text-white font-bold" : "text-white"
+              }
+              onClick={handleMenuItemClick}
+            >
+              {item.name}
+            </NavLink>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -108,9 +86,7 @@ function NavBar() {
             }
             variant="flat"
             color="primary"
-            onClick={() => {
-              handleAuthClick();
-            }}
+            onClick={handleAuthClick}
           >
             <BsGithub className="mr-1" />
             {isAuthenticated ? "Sign Out" : "Sign Up"}
