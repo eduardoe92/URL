@@ -1,0 +1,91 @@
+{
+  "hash": "2b25b683",
+  "configHash": "53b11711",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "2a163de6",
+  "optimized": {
+    "@nextui-org/react": {
+      "src": "../../node_modules/@nextui-org/react/dist/index.mjs",
+      "file": "@nextui-org_react.js",
+      "fileHash": "ffb4676e",
+      "needsInterop": false
+    },
+    "dom-to-image": {
+      "src": "../../node_modules/dom-to-image/src/dom-to-image.js",
+      "file": "dom-to-image.js",
+      "fileHash": "9ceb4158",
+      "needsInterop": true
+    },
+    "prop-types": {
+      "src": "../../node_modules/prop-types/index.js",
+      "file": "prop-types.js",
+      "fileHash": "7ea560d1",
+      "needsInterop": true
+    },
+    "qrcode.react": {
+      "src": "../../node_modules/qrcode.react/lib/esm/index.js",
+      "file": "qrcode__react.js",
+      "fileHash": "73ac89ac",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d6eac752",
+      "needsInterop": true
+    },
+    "react-color": {
+      "src": "../../node_modules/react-color/es/index.js",
+      "file": "react-color.js",
+      "fileHash": "4109b848",
+      "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "448ead96",
+      "needsInterop": true
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.mjs",
+      "file": "react-icons_bs.js",
+      "fileHash": "6436bfe6",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "5de70030",
+      "needsInterop": false
+    },
+    "react-icons/fi": {
+      "src": "../../node_modules/react-icons/fi/index.mjs",
+      "file": "react-icons_fi.js",
+      "fileHash": "f69b7d74",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "59088944",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-B7C74N6U": {
+      "file": "chunk-B7C74N6U.js"
+    },
+    "chunk-ZNAOO6ZH": {
+      "file": "chunk-ZNAOO6ZH.js"
+    },
+    "chunk-I6O4YGKI": {
+      "file": "chunk-I6O4YGKI.js"
+    },
+    "chunk-WNPTCGAH": {
+      "file": "chunk-WNPTCGAH.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}
