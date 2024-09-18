@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.cjs",
   "scripts": {
-    "dev": "nodemon ./src/index.cjs"
+    "dev": "nodemon ./src/index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
