@@ -16,10 +16,7 @@ function App() {
           path="/create"
           element={<QRCode initialData={defaultQRData} />}
         />
-        {/* <Route
-          path="/profile"
-          element={<Profile/>}
-        /> */}
+        
       </Routes>
       <Footer />
     </>
