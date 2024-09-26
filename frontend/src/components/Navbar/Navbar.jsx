@@ -19,19 +19,8 @@ function NavBar() {
 
   React.useEffect(() => {
     const user = localStorage.getItem("user");
-    if (user) {
-      setIsAuthenticated(true);
-    }
+    setIsAuthenticated(!!user);
   }, []);
-
-  const menuItems = [
-    { name: "Inicio", path: "/" },
-    { name: "Creación QR", path: "/create" },
-  ];
-
-  const handleMenuItemClick = () => {
-    setIsMenuOpen(false);
-  };
 
   const handleAuthClick = () => {
     const popup = window.open(
@@ -47,29 +36,36 @@ function NavBar() {
       height=700`
     );
 
-    window.addEventListener("message", (event) => {
-      if (event.origin === "http://localhost:3000") {
-        if (event.data) {
-          localStorage.setItem("user", JSON.stringify(event.data));
-          setIsAuthenticated(true);
-          popup?.close();
-        }
+    const handleAuthMessage = (event) => {
+      if (event.origin === "http://localhost:3000" && event.data?.user) {
+        localStorage.setItem("user", JSON.stringify(event.data.user));
+        console.log(event.data.user);
+        setIsAuthenticated(true);
+        popup?.close();
+        window.removeEventListener("message", handleAuthMessage);
       }
-    });
+    };
 
+    window.addEventListener("message", handleAuthMessage);
     setIsMenuOpen(false);
   };
 
   const handleLogout = () => {
     localStorage.removeItem("user");
     setIsAuthenticated(false);
+    window.location.href = "/";
   };
+
+  const menuItems = [
+    { name: "Inicio", path: "/" },
+    ...(isAuthenticated ? [{ name: "Creación QR", path: "/create" }] : []),
+  ];
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
-      className="text-white py-1"
+      className="py-1 text-white"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -80,14 +76,15 @@ function NavBar() {
           <NavLink
             to="/"
             className="flex items-center"
-            onClick={handleMenuItemClick}
+            onClick={() => setIsMenuOpen(false)}
           >
             <LogoIcon />
             <p className="font-bold">QR App</p>
           </NavLink>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         {menuItems.map((item, index) => (
           <NavbarItem key={index}>
             <NavLink
@@ -95,7 +92,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? "text-white font-bold" : "text-white"
               }
-              onClick={handleMenuItemClick}
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </NavLink>
@@ -111,13 +108,7 @@ function NavBar() {
           className="capitalize"
         >
           <Button
-            as={NavLink}
-            to={isAuthenticated ? "/" : "/"}
-            className={({ isActive }) =>
-              isActive
-                ? "text-white font-bold flex items-center"
-                : "text-white flex items-center hover:scale-110 hover:opacity-80 transition"
-            }
+            className="flex items-center text-white transition hover:scale-110 hover:opacity-80"
             variant="flat"
             color="primary"
             onClick={isAuthenticated ? handleLogout : handleAuthClick}
@@ -127,6 +118,7 @@ function NavBar() {
           </Button>
         </NavbarItem>
       </NavbarContent>
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
@@ -135,7 +127,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? "text-white font-bold w-full" : "text-white w-full"
               }
-              onClick={handleMenuItemClick}
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </NavLink>
