@@ -20,7 +20,8 @@ Este es un proyecto en desarrollo de un acortador de enlaces y generador de cód
 
 ## 🌐 Despliegue
 
-La aplicación está desplegado en Vercel. Puedes verlo en [![Website](https://img.shields.io/badge/Website-%23000000.svg?style=for-the-badge&logo=web&logoColor=white&color=purple)](https://urlqr.vercel.app/) 
+- La aplicación está desplegado en Vercel. 
+- Puedes verlo en: <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
 
 ---
 
