@@ -47,5 +47,6 @@ This is a work-in-progress project for a link shortener and QR code generator, b
 
 ## 🌐 Deployment
 
-The app is deployed on Vercel. You can view it at [![Website](https://img.shields.io/badge/Website-%23000000.svg?style=for-the-badge&logo=web&logoColor=white&color=purple)](https://urlqr.vercel.app/) 
+- The app is deployed on Vercel. 
+- You can view it at <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
 
