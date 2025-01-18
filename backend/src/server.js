@@ -1,13 +1,24 @@
-const app = require('./app');
-const sequelize = require('./config/database');
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+const authRoutes = require('./routes/authRoutes');
+require('./config/passportConfig');
 
-const PORT = process.env.PORT || 3000;
+const app = express();
 
-sequelize.sync({ force: false }).then(() => {
-    console.log('Database connected');
-    app.listen(PORT, () => {
-        console.log(`Server running on http://localhost:${PORT}`);
-    });
-}).catch(err => {
-    console.error('Error connecting to the database', err);
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/auth', authRoutes);
+
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
 });
