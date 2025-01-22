@@ -1,3 +1,5 @@
+### *Aplicación en proceso...*
+
 # Acortador de Enlaces y Códigos QR
 
 ## Descripción
@@ -24,6 +26,8 @@ Este es un proyecto en desarrollo de un acortador de enlaces y generador de cód
 - Puedes verlo en: <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
 
 ---
+
+### *Application in process...*
 
 # Link & QR Code Shortener
 
