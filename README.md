@@ -1,6 +1,6 @@
 ### *Aplicación en proceso...*
 
-# Acortador de Enlaces y Códigos QR
+# Aplicación Códigos QR
 
 ## Descripción
 
@@ -29,7 +29,7 @@ Este es un proyecto en desarrollo de un acortador de enlaces y generador de cód
 
 ### *Application in process...*
 
-# Link & QR Code Shortener
+# QR Codes Application
 
 ## Description
 
