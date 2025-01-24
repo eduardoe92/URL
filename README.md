@@ -4,7 +4,7 @@
 
 ## Descripción
 
-Este es un proyecto en desarrollo de un acortador de enlaces y generador de códigos QR, construido con React y Vite. El objetivo de este proyecto es proporcionar una herramienta sencilla para acortar enlaces largos y generar códigos QR que se puedan compartir fácilmente.
+Este es un proyecto en desarrollo de un generador de códigos QR, construido con React y Vite. El objetivo de este proyecto es proporcionar una herramienta sencilla para generar códigos QR que se puedan compartir fácilmente.
 
 ## Características
 
@@ -33,7 +33,7 @@ Este es un proyecto en desarrollo de un acortador de enlaces y generador de cód
 
 ## Description
 
-This is a work-in-progress project for a link shortener and QR code generator, built with React and Vite. The goal of this project is to provide a simple tool to shorten long links and generate QR codes that can be easily shared.
+This is a QR code generator project in development, built with React and Vite. The goal of this project is to provide a simple tool to generate QR codes that can be easily shared.
 
 ## Features
 
