@@ -8,7 +8,6 @@ Este es un proyecto en desarrollo de un generador de códigos QR, construido con
 
 ## Características
 
-- Acortar enlaces largos a URL más cortas y fáciles de compartir.
 - Generar códigos QR para los enlaces, facilitando el acceso desde dispositivos móviles.
 - Interfaz de usuario intuitiva y fácil de usar.
 
@@ -37,7 +36,6 @@ This is a QR code generator project in development, built with React and Vite. T
 
 ## Features
 
-- Shorten long links to shorter, more shareable URLs.
 - Generate QR codes for links, making them easily accessible from mobile devices.
 - Intuitive and user-friendly interface.
 
