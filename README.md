@@ -18,6 +18,7 @@ Este es un proyecto en desarrollo de un generador de códigos QR, construido con
 - **JavaScript**: Lenguaje de programación utilizado para la lógica del proyecto.
 - **HTML**: Lenguaje de marcado para la estructura de la aplicación.
 - **CSS**: Lenguaje de estilos para diseñar la apariencia de la aplicación.
+- **PostgreSQL**: Como base de datos para el registro de usuarios y QR generados.
 
 ## 🌐 Despliegue
 
@@ -46,6 +47,7 @@ This is a QR code generator project in development, built with React and Vite. T
 - **JavaScript**: Programming language used for the project's logic.
 - **HTML**: Markup language for the structure of the application.
 - **CSS**: Styling language to design the appearance of the application.
+- **PostgreSQL**: As a database for user registration and generated QR codes.
 
 ## 🌐 Deployment
 
