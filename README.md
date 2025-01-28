@@ -1,5 +1,3 @@
-### *Aplicación en proceso...*
-
 # Aplicación Códigos QR
 
 ## Descripción
@@ -26,9 +24,6 @@ Este es un proyecto en desarrollo de un generador de códigos QR, construido con
 - Puedes verlo en: <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
 
 ---
-
-### *Application in process...*
-
 # QR Codes Application
 
 ## Description
