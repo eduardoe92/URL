@@ -11,7 +11,9 @@ export const socialLinks = [
     label: "Linkedin",
     icon: FaLinkedin,
   },
-  { href: "https://github.com/eduardoe92", label: "Github", icon: FaGithub },
+  { href: "https://github.com/eduardoe92", 
+    label: "Github", 
+    icon: FaGithub },
   {
     href: "https://www.instagram.com/eduardo.e",
     label: "Instagram",
