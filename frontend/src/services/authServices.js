@@ -1,6 +1,12 @@
+const apiUrl = import.meta.env.VITE_API_URL;
+
+if (!apiUrl) {
+    throw new Error('La variable de entorno VITE_API_URL no está definida');
+}
+
 export const loginWithGithub = async () => {
     try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/github`, {
+        const response = await fetch(`${apiUrl}/auth/github`, {
             method: 'GET',
             credentials: 'include',
         });
@@ -13,7 +19,7 @@ export const loginWithGithub = async () => {
 
 export const logout = async () => {
     try {
-        await fetch(`${import.meta.env.VITE_API_URL}/auth/logout`, {
+        await fetch(`${apiUrl}/auth/logout`, {
             method: 'POST',
             credentials: 'include',
         });
