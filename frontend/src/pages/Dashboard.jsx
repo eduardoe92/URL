@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../context/AuthContext";
-import QRCodeGenerator from "../components/QRCodeGenerator";
+import { AuthContext } from "@/context/AuthContext";
+import QRCodeGenerator from "@/components/QRCodeGenerator";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
