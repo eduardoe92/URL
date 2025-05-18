@@ -20,8 +20,9 @@ Este es un proyecto en desarrollo de un generador de códigos QR, construido con
 
 ## 🌐 Despliegue
 
-- La aplicación está desplegado en Vercel. 
-- Puedes verlo en: <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
+La aplicación está desplegado en Vercel. 
+
+Puedes verlo en: <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
 
 ---
 # QR Codes Application
@@ -46,5 +47,6 @@ This is a QR code generator project in development, built with React and Vite. T
 
 ## 🌐 Deployment
 
-- The app is deployed on Vercel. 
-- You can view it at <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
+The app is deployed on Vercel. 
+
+You can view it at <a href="https://urlqr.vercel.app/"><img src="https://cdn-icons-png.flaticon.com/512/5602/5602732.png" width="40" height="40"/></a>
